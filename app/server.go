@@ -10,6 +10,7 @@ func Start() {
 	e := echo.New()
 	e.Validator = &Validator{validator: validator.New()}
 
+	// ミドルウェア
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 
